@@ -42,12 +42,15 @@ function nam(playerSelection, computerSelection) {
         return ("hi");
     }
 }
+nam("rock", getComputerChoice());
+
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 
 console.log(nam(playerSelection, computerSelection));
 console.log(computerSelection)
+
 
 
 
