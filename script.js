@@ -17,7 +17,7 @@ function getComputerChoice() {
 
 
 
-function nam(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
         return ("You Lose! Paper beats Rock");
@@ -42,15 +42,25 @@ function nam(playerSelection, computerSelection) {
         return ("hi");
     }
 }
-nam("rock", getComputerChoice());
+
 
 
 const playerSelection = "rock";
 const computerSelection = getComputerChoice();
 
-console.log(nam(playerSelection, computerSelection));
-console.log(computerSelection)
+//console.log(computerSelection);
+//console.log(playRound(playerSelection, computerSelection));
 
+
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        ;
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection))
+    }
+}
+game()
 
 
 
