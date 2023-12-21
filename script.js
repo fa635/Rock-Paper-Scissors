@@ -55,6 +55,16 @@ function playRound(playerSelection, computerSelection) {
 
 
 
+function winner(playerScore, computerScore) {
+    if (playerScore > computerScore) {
+        return ("you won the game");
+    }
+    else {
+        return ("you lost the game");
+    }
+
+}
+
 
 
 //console.log(computerSelection);
@@ -72,7 +82,7 @@ function game() {
     }
 }
 game()
-
+console.log(winner(playerScore, computerScore))
 
 
 /* so i need the fuction to tell who wins tra computer and human. 
