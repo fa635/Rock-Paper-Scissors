@@ -68,33 +68,6 @@ function winner(playerScore, computerScore) {
 }
 
 
-
-
-//console.log(computerSelection);
-//console.log(playRound(playerSelection, computerSelection));
-
-/*computerScore <= 5;
-playerScore <= 5;
-
-function game() {
-    for (let i = 0; i < 1000; i++) {
-        let playerSelection = prompt("enter");
-        let computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection))
-        console.log(playerScore);
-        console.log(computerScore);
-    }
-    if (computerScore === 5 || playerScore === 5
-        ) {
-        break;
-    }
-}
-game()
-console.log(winner(playerScore, computerScore)) */
-
-
-
-
 function game() {
     while (computerScore < 5 && playerScore < 5 ) {
         let playerSelection = prompt("enter");
@@ -107,5 +80,3 @@ function game() {
 game()
 console.log(winner(playerScore, computerScore))
 
-/* so i need the fuction to tell who wins tra computer and human. 
-i need the program to know what beats what */
