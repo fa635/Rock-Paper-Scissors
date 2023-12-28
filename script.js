@@ -18,7 +18,22 @@ let playerScore = 0;
 let computerScore = 0;
 
 
+const rock = document.querySelector(".rock");
+rock.addEventListener("click", gameRock);
+
+const paper = document.querySelector(".paper");
+paper.addEventListener("click", gamePaper);
+
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener("click", gameScissors);
+
+
+
+
+
 function playRound(playerSelection, computerSelection) {
+
+    
     
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
         computerScore++
@@ -51,7 +66,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
- 
+
 
 
 function winner(playerScore, computerScore) {
@@ -68,15 +83,49 @@ function winner(playerScore, computerScore) {
 }
 
 
-function game() {
-    while (computerScore < 5 && playerScore < 5 ) {
-        let playerSelection = prompt("enter");
+
+
+
+function gameRock() {
+    //while (computerScore < 5 && playerScore < 5 ) {
+        let playerSelection = "rock";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore);
         console.log(computerScore);
-    }
+    //}
 }
-game()
-console.log(winner(playerScore, computerScore))
+//gameRock()
+//console.log(winner(playerScore, computerScore))
+
+
+function gamePaper() {
+    //while (computerScore < 5 && playerScore < 5 ) {
+        let playerSelection = "paper";
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore);
+        console.log(computerScore);
+    //}
+}
+//gamePaper()
+//console.log(winner(playerScore, computerScore))
+
+
+function gameScissors() {
+    //while (computerScore < 5 && playerScore < 5 ) {
+        let playerSelection = "scissors";
+        let computerSelection = getComputerChoice();
+        console.log(playRound(playerSelection, computerSelection));
+        console.log(playerScore);
+        console.log(computerScore);
+    //}
+}
+//gameScissors()
+//console.log(winner(playerScore, computerScore))
+
+
+
+
+
 
