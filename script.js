@@ -102,6 +102,18 @@ function gameRock() {
         computer.textContent = "computerScore : " + computerScore;
 
         
+
+        const yourChoice = document.querySelector(".playerSelection");
+        yourChoice.textContent = "You chose : " + playerSelection;
+
+        const computerChoice = document.querySelector(".computerSelection");
+        computerChoice.textContent = " Computer chose : " + computerSelection;
+
+
+
+        const comment = document.querySelector(".comment");
+        comment.textContent = playRound(playerSelection, computerSelection);
+
     //}
 }
 //gameRock()
@@ -123,6 +135,19 @@ function gamePaper() {
         const computer = document.querySelector(".computerScore");
         computer.textContent = "computerScore : " + computerScore;
 
+        
+        
+        const yourChoice = document.querySelector(".playerSelection");
+        yourChoice.textContent = "You chose : " + playerSelection;
+
+        const computerChoice = document.querySelector(".computerSelection");
+        computerChoice.textContent = " Computer chose : " + computerSelection;
+
+
+
+        const comment = document.querySelector(".comment");
+        comment.textContent = playRound(playerSelection, computerSelection);
+
     //}
 }
 //gamePaper()
@@ -143,6 +168,19 @@ function gameScissors() {
 
         const computer = document.querySelector(".computerScore");
         computer.textContent = "computerScore : " + computerScore;
+
+
+
+        const yourChoice = document.querySelector(".playerSelection");
+        yourChoice.textContent = "You chose : " + playerSelection;
+
+        const computerChoice = document.querySelector(".computerSelection");
+        computerChoice.textContent = " Computer chose : " + computerSelection;
+
+
+
+        const comment = document.querySelector(".comment");
+        comment.textContent = playRound(playerSelection, computerSelection);
 
     //}
 }
