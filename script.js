@@ -93,6 +93,15 @@ function gameRock() {
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore);
         console.log(computerScore);
+
+
+        const player = document.querySelector(".playerScore");
+        player.textContent = "playerScore : " + playerScore;
+
+        const computer = document.querySelector(".computerScore");
+        computer.textContent = "computerScore : " + computerScore;
+
+        
     //}
 }
 //gameRock()
@@ -106,6 +115,14 @@ function gamePaper() {
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore);
         console.log(computerScore);
+        
+
+        const player = document.querySelector(".playerScore");
+        player.textContent = "playerScore : " + playerScore;
+
+        const computer = document.querySelector(".computerScore");
+        computer.textContent = "computerScore : " + computerScore;
+
     //}
 }
 //gamePaper()
@@ -119,10 +136,26 @@ function gameScissors() {
         console.log(playRound(playerSelection, computerSelection));
         console.log(playerScore);
         console.log(computerScore);
+
+
+        const player = document.querySelector(".playerScore");
+        player.textContent = "playerScore : " + playerScore;
+
+        const computer = document.querySelector(".computerScore");
+        computer.textContent = "computerScore : " + computerScore;
+
     //}
 }
 //gameScissors()
 //console.log(winner(playerScore, computerScore))
+
+
+/*const player = document.querySelector("p");
+player.textContent = "playerScore : " + playerScore;
+
+const computer = document.querySelector("p");
+computer.textContent = "computerScore : " + computerScore;*/
+
 
 
 
