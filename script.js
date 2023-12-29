@@ -92,7 +92,7 @@ function winner(playerScore, computerScore) {
 
 
 function gameRock() {
-    //while (computerScore < 5 && playerScore < 5 ) {
+    
         let playerSelection = "rock";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
@@ -119,14 +119,13 @@ function gameRock() {
         const comment = document.querySelector(".comment");
         comment.textContent = playRound(playerSelection, computerSelection);
 
-    //}
+    
 }
-//gameRock()
-//console.log(winner(playerScore, computerScore))
+
 
 
 function gamePaper() {
-    //while (computerScore < 5 && playerScore < 5 ) {
+    
         let playerSelection = "paper";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
@@ -153,23 +152,19 @@ function gamePaper() {
         const comment = document.querySelector(".comment");
         comment.textContent = playRound(playerSelection, computerSelection);
 
-    //}
+    
 }
-//gamePaper()
-//console.log(winner(playerScore, computerScore))
+
 
 
 function gameScissors() {
-    //while (computerScore < 5 && playerScore < 5 ) {
+    
         let playerSelection = "scissors";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
         if (playerScore >= 5 || computerScore >= 5) {
             endGame();
         }
-        /*if (computerScore >= 5) {
-            endGame()
-        }*/
         console.log(playerScore);
         console.log(computerScore);
 
@@ -196,17 +191,9 @@ function gameScissors() {
         
         
 
-    //}
+    
 }
-//gameScissors()
-//console.log(winner(playerScore, computerScore))
 
-
-/*const player = document.querySelector("p");
-player.textContent = "playerScore : " + playerScore;
-
-const computer = document.querySelector("p");
-computer.textContent = "computerScore : " + computerScore;*/
 
 
 
