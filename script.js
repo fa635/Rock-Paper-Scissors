@@ -18,6 +18,8 @@ let playerScore = 0;
 let computerScore = 0;
 
 
+const buttons = document.querySelectorAll("button");
+
 const rock = document.querySelector(".rock");
 rock.addEventListener("click", gameRock);
 
@@ -37,8 +39,7 @@ function playRound(playerSelection, computerSelection) {
     
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
         computerScore++
-        return ("You Lose! Paper beats Rock");
-        
+        return ("You Lose! Paper beats Rock");  
     }
     else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
         computerScore++
@@ -46,7 +47,7 @@ function playRound(playerSelection, computerSelection) {
     }
     else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
         computerScore++
-        console.log("You Lose! Scissors beats Paper");
+        return ("You Lose! Scissors beats Paper");
     }
 
     else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
@@ -64,6 +65,8 @@ function playRound(playerSelection, computerSelection) {
     else {
         return ("It's a tie !");
     }
+
+    
 }
 
 
@@ -81,6 +84,8 @@ function winner(playerScore, computerScore) {
     }
 
 }
+
+
 
 
 
@@ -159,6 +164,12 @@ function gameScissors() {
         let playerSelection = "scissors";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        if (playerScore >= 5 || computerScore >= 5) {
+            endGame();
+        }
+        /*if (computerScore >= 5) {
+            endGame()
+        }*/
         console.log(playerScore);
         console.log(computerScore);
 
@@ -182,6 +193,9 @@ function gameScissors() {
         const comment = document.querySelector(".comment");
         comment.textContent = playRound(playerSelection, computerSelection);
 
+        
+        
+
     //}
 }
 //gameScissors()
@@ -197,6 +211,12 @@ computer.textContent = "computerScore : " + computerScore;*/
 
 
 
+function endGame() {
+
+        buttons.forEach((button) => {button.disabled = true});
+
+}
 
 
+//something wrong with the game logic. adding 2 points when player scissors, computer rock
 
