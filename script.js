@@ -126,7 +126,7 @@ function gameRock() {
         let playerSelection = "rock";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
-        if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore === 5 || computerScore === 5) {
             endGame();
         }
         console.log(playerScore);
@@ -169,7 +169,7 @@ function gamePaper() {
         let playerSelection = "paper";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
-        if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore === 5 || computerScore === 5) {
             endGame();
         }
         console.log(playerScore);
@@ -212,7 +212,7 @@ function gameScissors() {
         let playerSelection = "scissors";
         let computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
-        if (playerScore >= 5 || computerScore >= 5) {
+        if (playerScore === 5 || computerScore === 5) {
             endGame();
         }
         console.log(playerScore);
