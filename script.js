@@ -71,6 +71,36 @@ function playRound(playerSelection, computerSelection) {
 
 
 
+function gameComment(playerSelection, computerSelection) {
+    
+    if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
+        return ("You Lose! Paper beats Rock");  
+    }
+    else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "rock") {
+        return ("You Lose! Rock beats Scissors");
+    }
+    else if (playerSelection.toLowerCase() === "paper" && computerSelection === "scissors") {
+        return ("You Lose! Scissors beats Paper");
+    }
+
+    else if (playerSelection.toLowerCase() === "paper" && computerSelection === "rock") {
+        return ("You Win! Paper beats Rock");
+    }
+    else if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors") {
+        return ("You Win! Rock beats Scissors");
+    }
+    else if (playerSelection.toLowerCase() === "scissors" && computerSelection === "paper") {
+        return ("You Win! Scissors beats Paper");
+    }
+    else {
+        return ("It's a tie !");
+    }
+
+    
+}
+
+
+
 
 function winner(playerScore, computerScore) {
     if (playerScore > computerScore) {
@@ -120,7 +150,7 @@ function gameRock() {
 
 
         const comment = document.querySelector(".comment");
-        comment.textContent = playRound(playerSelection, computerSelection);
+        comment.textContent = gameComment(playerSelection, computerSelection);
 
     
 }
@@ -156,7 +186,7 @@ function gamePaper() {
 
 
         const comment = document.querySelector(".comment");
-        comment.textContent = playRound(playerSelection, computerSelection);
+        comment.textContent = gameComment(playerSelection, computerSelection);
 
     
 }
@@ -192,7 +222,7 @@ function gameScissors() {
 
 
         const comment = document.querySelector(".comment");
-        comment.textContent = playRound(playerSelection, computerSelection);
+        comment.textContent = gameComment(playerSelection, computerSelection);
 
         
         
@@ -212,4 +242,5 @@ function endGame() {
 
 
 //something wrong with the game logic. adding 2 points when player scissors, computer rock
-
+//whenever scissors is involved, it adds 2. no actually random but with scissors
+//no actually for everyone
