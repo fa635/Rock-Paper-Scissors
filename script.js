@@ -3,7 +3,6 @@
 //computer choice
 const choices = ["rock","paper","scissors"];
 
-
 function getComputerChoice() {
     return choices[Math.floor(Math.random() * choices.length)]
 }
@@ -11,28 +10,6 @@ function getComputerChoice() {
 
 
 //single round
-
-
-
-let playerScore = 0;
-let computerScore = 0;
-
-
-const buttons = document.querySelectorAll("button");
-
-const rock = document.querySelector(".rock");
-rock.addEventListener("click", gameRock);
-
-const paper = document.querySelector(".paper");
-paper.addEventListener("click", gamePaper);
-
-const scissors = document.querySelector(".scissors");
-scissors.addEventListener("click", gameScissors);
-
-
-
-
-
 function playRound(playerSelection, computerSelection) {
 
     
@@ -71,6 +48,10 @@ function playRound(playerSelection, computerSelection) {
 
 
 
+
+
+
+
 function gameComment(playerSelection, computerSelection) {
     
     if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper") {
@@ -99,9 +80,6 @@ function gameComment(playerSelection, computerSelection) {
     
 }
 
-
-
-
 function declareWinner(playerScore, computerScore) {
     if (playerScore > computerScore) {
         return ("you won the game");
@@ -115,9 +93,11 @@ function declareWinner(playerScore, computerScore) {
 
 }
 
+function endGame() {
 
+    buttons.forEach((button) => {button.disabled = true});
 
-
+}
 
 
 
@@ -255,13 +235,19 @@ function gameScissors() {
 
 
 
-function endGame() {
-
-        buttons.forEach((button) => {button.disabled = true});
-
-}
 
 
-//something wrong with the game logic. adding 2 points when player scissors, computer rock
-//whenever scissors is involved, it adds 2. no actually random but with scissors
-//no actually for everyone
+let playerScore = 0;
+let computerScore = 0;
+
+
+const buttons = document.querySelectorAll("button");
+
+const rock = document.querySelector(".rock");
+rock.addEventListener("click", gameRock);
+
+const paper = document.querySelector(".paper");
+paper.addEventListener("click", gamePaper);
+
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener("click", gameScissors);
