@@ -102,7 +102,7 @@ function gameComment(playerSelection, computerSelection) {
 
 
 
-function winner(playerScore, computerScore) {
+function declareWinner(playerScore, computerScore) {
     if (playerScore > computerScore) {
         return ("you won the game");
     }
@@ -152,6 +152,13 @@ function gameRock() {
         const comment = document.querySelector(".comment");
         comment.textContent = gameComment(playerSelection, computerSelection);
 
+        const winner = document.querySelector(".winner");
+
+        if (playerScore === 5 || computerScore === 5) {
+            winner.textContent = declareWinner(playerScore, computerScore);
+        }
+        
+
     
 }
 
@@ -188,6 +195,13 @@ function gamePaper() {
         const comment = document.querySelector(".comment");
         comment.textContent = gameComment(playerSelection, computerSelection);
 
+
+        const winner = document.querySelector(".winner");
+
+        if (playerScore === 5 || computerScore === 5) {
+            winner.textContent = declareWinner(playerScore, computerScore);
+        }
+
     
 }
 
@@ -223,6 +237,13 @@ function gameScissors() {
 
         const comment = document.querySelector(".comment");
         comment.textContent = gameComment(playerSelection, computerSelection);
+
+
+        const winner = document.querySelector(".winner");
+
+        if (playerScore === 5 || computerScore === 5) {
+            winner.textContent = declareWinner(playerScore, computerScore);
+        }
 
         
         
